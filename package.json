@@ -1,7 +1,7 @@
 {
-	"name": "bot",
-	"version": "1.0.0",
-	"description": "Организация учебного процесса с помощью чат-бота.",
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "Организация учебного процесса с помощью чат-бота.",
   "keywords": [
     "angular",
     "webpack",
@@ -26,23 +26,23 @@
     "test-watch": "karma start --auto-watch --no-single-run",
     "e2e": "node ./node_modules/.bin/protractor",
     "e2e_windows": "node .\\node_modules\\.bin\\protractor",
-    "e2e-watch": "./node_modules/.bin/protractor --elementExplorer",
-    "e2e-watch_windows": ".\\node_modules\\.bin\\protractor --elementExplorer",
+    "e2e-watch": "protractor --elementExplorer",
+    "e2e-watch_windows": "protractor --elementExplorer",
     "start": "npm run server",
     "stats": "webpack --json --profile > stats.json",
     "selenium-install": "node seleniumInstall.js",
     "selenium-start": "selenium-standalone start"
   },
-	"repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/Geekymate/bot.git"
   },
-	"author": "ExpFront",
+  "author": "ExpFront",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Geekymate/bot/issues"
   },
-	"homepage": "https://github.com/Geekymate/bot#readme",
+  "homepage": "https://github.com/Geekymate/bot#readme",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^0.2.18",
@@ -93,5 +93,6 @@
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
-  }
+  },
+  "main": "karma.conf.js"
 }
