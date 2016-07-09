@@ -94,5 +94,5 @@
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
   },
-  "main": "karma.conf.js"
+  "main": "karma.conf.js",
 }
