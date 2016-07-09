@@ -3,23 +3,23 @@
  * ========================================================================== */
 
 import angular        from 'angular';
-import HomeController from './controller/HomeCtrl';
+import TestController from './controller/TestCtrl';
 
 /*
  * Stylesheets
  * ========================================================================== */
 
-import './stylesheets/home.scss';
+import './stylesheets/test.scss';
 
 /* ========================================================================== */
 
 /**
- * Define home page module.
+ * Define test page module.
  * @param {String} moduleName.
  * @param {Array} dependencies.
  * @export Module name - name of this module.
  */
 export default angular
-	.module('Starter.App.Home', [])
-	.controller('HomeController', HomeController)
+	.module('Starter.App.Test', [])
+	.controller('TestController', TestController)
 	.name;

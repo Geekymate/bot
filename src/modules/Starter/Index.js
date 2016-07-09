@@ -44,6 +44,9 @@ import './stylesheets/layout.scss';
  * @param {Array} dependencies.
  * @export Module name - name of root module
  */
-export default angular.module('Starter.App', [
-  PointerEvents, ThirdParties, TitleService
-]).controller('StarterController', StarterController).name;
+export default angular
+	.module('Starter.App', [
+		PointerEvents, ThirdParties, TitleService
+	])
+	.controller('StarterController', StarterController)
+	.name;
