@@ -2,5 +2,14 @@
 @import "../../../../stylesheets/variables.scss";
 
 .header {
+	margin-top: 15px;
+}
 
+.logo {
+	color: #337ab7;
+
+	&:hover
+	&:focus {
+		color: #337ab7 !important;
+	}
 }

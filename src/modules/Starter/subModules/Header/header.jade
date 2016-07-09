@@ -1,1 +1,27 @@
-header.header
+div(class="container")
+	nav.header(class="navbar navbar-default")
+		div(class="container-fluid")
+			div(class="navbar-header")
+				button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+					span(class="sr-only")
+						| Toggle navigation
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+				a(class="navbar-brand logo" ui-sref="home")
+					| Geekymate
+			div(style="height: 1px;" aria-expanded="false" id="navbar" class="navbar-collapse collapse")
+				ul(class="nav navbar-nav")
+					li(class="active")
+						a(ui-sref="home")
+							| Главная
+					li(class="nav_button") 
+						a(ui-href="Docs.html")
+							| Документация
+					li(class="nav_button")
+						a(ui-sref="test")
+							| Тесты
+				ul(class="nav navbar-nav navbar-right")
+					li(class="nav_button")
+						a(href="/ss")
+							| Вход

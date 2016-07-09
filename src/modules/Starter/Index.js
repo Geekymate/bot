@@ -17,7 +17,7 @@ import TitleService      from './services/TitleService/TitleService';
 /* Base
  * ===================================== */
 
-import './stylesheets/reset.scss';
+// import './stylesheets/reset.scss';
 import './stylesheets/fonts.scss';
 import './stylesheets/globals.scss';
 
