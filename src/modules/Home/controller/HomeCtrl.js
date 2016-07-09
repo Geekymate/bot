@@ -13,5 +13,7 @@ export default class HomeController {
     TitleService.setTitle({
       newTitle: 'Home'
     });
+
+		
   }
 }

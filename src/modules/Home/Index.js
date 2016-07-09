@@ -19,4 +19,7 @@ import './stylesheets/home.scss';
  * @param {Array} dependencies.
  * @export Module name - name of this module.
  */
-export default angular.module('Starter.App.Home', []).controller('HomeController', HomeController).name;
+export default angular
+	.module('Starter.App.Home', [])
+	.controller('HomeController', HomeController)
+	.cont.name;

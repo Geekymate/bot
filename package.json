@@ -1,7 +1,7 @@
 {
-  "name": "angular-webpack-starter-kit",
-  "version": "5.2.1",
-  "description": "An Angular Webpack Starter kit featuring Angular 1.x (ui-router, Tests, E2E, Dev/Prod), Karma, Protractor, Jasmine, Istanbul, Babel, Postcss, Jade, livereload and Webpack",
+	"name": "bot",
+	"version": "1.0.0",
+	"description": "Организация учебного процесса с помощью чат-бота.",
   "keywords": [
     "angular",
     "webpack",
@@ -33,17 +33,16 @@
     "selenium-install": "node seleniumInstall.js",
     "selenium-start": "selenium-standalone start"
   },
-  "repository": {
+	"repository": {
     "type": "git",
-    "url": "https://github.com/zombiQWERTY/angular-webpack-starter.git"
+    "url": "git+https://github.com/Geekymate/bot.git"
   },
-  "author": "zombiQWERTY <zombiqwerty@yandex.ru>",
-  "license": "MIT",
+	"author": "ExpFront",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zombiQWERTY/angular-webpack-starter/issues",
-    "email": "zombiqwerty@yandex.ru"
+    "url": "https://github.com/Geekymate/bot/issues"
   },
-  "homepage": "https://github.com/zombiQWERTY/angular-webpack-starter",
+	"homepage": "https://github.com/Geekymate/bot#readme",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^0.2.18",
