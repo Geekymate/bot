@@ -39,7 +39,14 @@ const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $log
 			controller: 'TestController',
 			controllerAs: 'Test',
 			template: require('./modules/Test/views/test.jade')()
-		});
+		})
+		.state({
+			url: '/login',
+			name: 'login',
+			controller: 'LoginController',
+			controllerAs: 'Login',
+			template: require('./modules/Login/views/login.jade')()
+		})
 };
 
 /** Export our config */

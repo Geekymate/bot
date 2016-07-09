@@ -6,7 +6,8 @@ import angular from 'angular';
 
 import Layout  from './Index';
 import Home    from '../Home/Index';
-import Test from '../Test/Index';
+import Test    from '../Test/Index';
+import Login   from '../Login/Index';
 
 /**
  * Define app module.
@@ -16,6 +17,6 @@ import Test from '../Test/Index';
  */
 export default angular
 	.module('Starter.App.controllers', [
-  	Layout, Home, Test
+  	Layout, Home, Test, Login
 	])
 	.name;
