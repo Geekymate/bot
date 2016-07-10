@@ -2,7 +2,7 @@
 @import "../../../stylesheets/variables.scss";
 
 
-.page-test {
+.page-test-form {
 	margin-bottom: 20px;
 
 	ul
@@ -22,6 +22,9 @@
 		}
 	}
 
+	.main {
+		display: flex;
+	}
 	.success-message {
 		color: #449d44;
 	}

@@ -9,6 +9,10 @@
 	.header {
 		margin: 50px 0;
 		color: #555;
+
+		&:first-of-type {
+			margin: 30px 0;
+		}
 	}
 
 	.code {

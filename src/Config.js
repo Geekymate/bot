@@ -34,11 +34,18 @@ const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $log
 			template: require('./modules/Home/views/home.jade')()
 		})
 		.state({
-			url: '/test',
-			name: 'test',
-			controller: 'TestController',
-			controllerAs: 'Test',
-			template: require('./modules/Test/views/test.jade')()
+			url: '/test/list',
+			name: 'testList',
+			controller: 'TestListController',
+			controllerAs: 'TestList',
+			template: require('./modules/TestList/views/testList.jade')()
+		})
+		.state({
+			url: '/test/form',
+			name: 'testForm',
+			controller: 'TestFormController',
+			controllerAs: 'TestForm',
+			template: require('./modules/TestForm/views/testForm.jade')()
 		})
 		.state({
 			url: '/docs',

@@ -18,9 +18,12 @@ div(class="container")
 					li(class="nav_button" ng-class="{active: Starter.state.includes('docs')}")
 						a(ui-sref="docs")
 							| Документация
-					li(class="nav_button" ng-class="{active: Starter.state.includes('test')}")
-						a(ui-sref="test")
+					li(class="nav_button" ng-class="{active: Starter.state.includes('testList')}")
+						a(ui-sref="testList")
 							| Тесты
+					li(class="nav_button" ng-class="{active: Starter.state.includes('testForm')}")
+						a(ui-sref="testForm")
+							| Создание теста
 				ul(class="nav navbar-nav navbar-right" ng-class="{active: Starter.state.includes('login')}")
 					li(cl§ass="nav_button")
 						a(ui-sref="login")

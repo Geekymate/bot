@@ -1,0 +1,8 @@
+div(class="container")
+	div(class="panel panel-warning" ng-repeat='test in TestList.tests.data')
+		div(class="panel-heading")
+			h3(class="panel-title")
+				| {{ test.title }}
+		div(class="panel-body")
+			a(ng-click='TestList.publishTest(test._id)')
+				| Опубликовать тест

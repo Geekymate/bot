@@ -1,16 +1,16 @@
-export default class TestController {
+export default class TestFormController {
 	constructor($http, TitleService) {
 		'ngInject';
 
 		TitleService.setTitle({
-			newTitle: 'Test'
+			newTitle: 'TestForm'
 		});
 
 		this.postStatus = 'creating';
 
 		this.test = {
-			title: 'Тест 1',
-			subject: 'Математика',
+			title: '',
+			subject: '',
 			questions: [{
 				title: '',
 				answers: {
@@ -50,13 +50,16 @@ export default class TestController {
 			}]
 		};
 
-		this.createTest = () => {
+		this.createTestForm = () => {
+			console.log('ss');
 			const url = 'http://localhost:9000/api/tests';
 			const data = this.test;
-			console.log(data);
+
 			return $http.post(url, data).then(res => {
+				console.log('1');
 				this.postStatus = 'created';
 			}, err => {
+				console.log('2')
 				this.postStatus = 'creating';
 			});
 		}
