@@ -1,7 +1,8 @@
 div.page-test(class='container' ng-switch='Test.postStatus')
-	span.success-message(class='col-xs-8' ng-switch-when='published')
-		| Ваш тест был успешно опубликован
-	div(class='row' ng-switch-when='unpublished')
+	span.success-message(ng-switch-when='created')
+		| Ваш тест был успешно создан
+	div(class='row text-center' ng-switch-when='creating')
+		h1.header Создайте тест
 		form.form(
 			name='test'
 			class='col-xs-offset-2 col-xs-8'
@@ -16,6 +17,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 					)
 					ul
 						li.answer
+							input.radio(
+								type='radio'
+								value='1'
+								ng-model='Test.test.questions[0].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -23,6 +29,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите первый ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='2'
+								ng-model='Test.test.questions[0].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -30,6 +41,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите второй ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='3'
+								ng-model='Test.test.questions[0].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -37,6 +53,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите третий ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='4'
+								ng-model='Test.test.questions[0].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -48,10 +69,15 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 						type='text'
 						class='form-control'
 						ng-model='Test.test.questions[1].title'
-						placeholder='Введите первый вопрос:'
+						placeholder='Введите второй вопрос:'
 					)
 					ul
 						li.answer
+							input.radio(
+								type='radio'
+								value='1'
+								ng-model='Test.test.questions[1].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -59,6 +85,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите первый ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='2'
+								ng-model='Test.test.questions[1].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -66,6 +97,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите второй ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='3'
+								ng-model='Test.test.questions[1].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -73,6 +109,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите третий ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='4'
+								ng-model='Test.test.questions[1].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -85,10 +126,15 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 						type='text'
 						class='form-control'
 						ng-model='Test.test.questions[2].title'
-						placeholder='Введите первый вопрос:'
+						placeholder='Введите третий вопрос:'
 					)
 					ul
 						li.answer
+							input.radio(
+								type='radio'
+								value='1'
+								ng-model='Test.test.questions[2].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -96,6 +142,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите первый ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='2'
+								ng-model='Test.test.questions[2].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -103,6 +154,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите второй ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='3'
+								ng-model='Test.test.questions[2].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -110,6 +166,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите третий ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='4'
+								ng-model='Test.test.questions[2].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -122,10 +183,15 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 						type='text'
 						class='form-control'
 						ng-model='Test.test.questions[3].title'
-						placeholder='Введите первый вопрос:'
+						placeholder='Введите четвертый вопрос:'
 					)
 					ul
 						li.answer
+							input.radio(
+								type='radio'
+								value='1'
+								ng-model='Test.test.questions[3].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -133,6 +199,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите первый ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='2'
+								ng-model='Test.test.questions[3].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -140,6 +211,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите второй ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='3'
+								ng-model='Test.test.questions[3].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -147,6 +223,11 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 								placeholder='Введите третий ответ:'
 							)
 						li.answer
+							input.radio(
+								type='radio'
+								value='4'
+								ng-model='Test.test.questions[3].correct_answer'
+							)
 							input(
 								type='text'
 								class='form-control'
@@ -156,6 +237,6 @@ div.page-test(class='container' ng-switch='Test.postStatus')
 			button(
 				type='submit'
 				class="btn btn-default btn-success col-xs-12 "
-				ng-click='Test.publishTest()'
+				ng-click='Test.createTest()'
 			).form_button
 				| Опубликовать тест

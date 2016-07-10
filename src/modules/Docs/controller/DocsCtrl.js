@@ -1,9 +1,9 @@
-export default class LoginController {
+export default class DocsController {
 	constructor(TitleService) {
 		'ngInject';
 
 		TitleService.setTitle({
-			newTitle: 'Test'
+			newTitle: 'Docs'
 		});
 	}
 }

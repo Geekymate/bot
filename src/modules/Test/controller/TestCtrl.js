@@ -6,7 +6,7 @@ export default class TestController {
 			newTitle: 'Test'
 		});
 
-		this.postStatus = 'unpublished';
+		this.postStatus = 'creating';
 
 		this.test = {
 			title: 'Тест 1',
@@ -19,7 +19,7 @@ export default class TestController {
 					answer_third: '',
 					answer_fourth: ''
 				},
-				correct_answer: 2
+				correct_answer: null
 			}, {
 				title: '',
 				answers: {
@@ -28,7 +28,7 @@ export default class TestController {
 					answer_third: '',
 					answer_fourth: ''
 				},
-				correct_answer: 3
+				correct_answer: null
 			}, {
 				title: '',
 				answers: {
@@ -37,7 +37,7 @@ export default class TestController {
 					answer_third: '',
 					answer_fourth: ''
 				},
-				correct_answer: 1
+				correct_answer: null
 			}, {
 				title: '',
 				answers: {
@@ -46,18 +46,18 @@ export default class TestController {
 					answer_third: '',
 					answer_fourth: ''
 				},
-				correct_answer: 0
+				correct_answer: null
 			}]
 		};
 
-		this.publishTest = () => {
+		this.createTest = () => {
 			const url = 'http://localhost:9000/api/tests';
 			const data = this.test;
-
+			console.log(data);
 			return $http.post(url, data).then(res => {
-				this.postStatus = 'published';
+				this.postStatus = 'created';
 			}, err => {
-				this.postStatus = 'unpublished';
+				this.postStatus = 'creating';
 			});
 		}
 	}

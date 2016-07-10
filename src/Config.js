@@ -7,32 +7,32 @@
  * @param {Object} $logProvider - Configures how the application logs messages.
  */
 const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $logProvider) => {
-  'ngInject';
+	'ngInject';
 
-  $logProvider.debugEnabled(true);  /** Turn debug mode on/off */
-  $locationProvider.html5Mode(true);  /** Turn html5 mode on */
-  $urlRouterProvider.otherwise('/home');  /** If current route not in routes then redirect to home */
+	$logProvider.debugEnabled(true);  /** Turn debug mode on/off */
+	$locationProvider.html5Mode(true);  /** Turn html5 mode on */
+	$urlRouterProvider.otherwise('/home');  /** If current route not in routes then redirect to home */
 
-  /**
-   * Url processing.
-   * @param {Object} $injector - Ability to inject providers.
-   * @param {Object} $location - Current location.
-   */
-  $urlRouterProvider.rule(($injector, $location) => {
-    const path = $location.path();
-    /** If route like as /home/ then /home */
-    $location.path(path[path.length - 1] === '/' ? path.slice(0, -1) : path).replace();
-  });
+	/**
+	 * Url processing.
+	 * @param {Object} $injector - Ability to inject providers.
+	 * @param {Object} $location - Current location.
+	 */
+	$urlRouterProvider.rule(($injector, $location) => {
+		const path = $location.path();
+		/** If route like as /home/ then /home */
+		$location.path(path[path.length - 1] === '/' ? path.slice(0, -1) : path).replace();
+	});
 
 
-  stateHelperProvider /** Describe our states */
-    .state({
-      url: '/',
-      name: 'home',
-      controller: 'HomeController',
-      controllerAs: 'Home',
-      template: require('./modules/Home/views/home.jade')()
-    })
+	stateHelperProvider /** Describe our states */
+		.state({
+			url: '/',
+			name: 'home',
+			controller: 'HomeController',
+			controllerAs: 'Home',
+			template: require('./modules/Home/views/home.jade')()
+		})
 		.state({
 			url: '/test',
 			name: 'test',
@@ -41,12 +41,19 @@ const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $log
 			template: require('./modules/Test/views/test.jade')()
 		})
 		.state({
+			url: '/docs',
+			name: 'docs',
+			controller: 'DocsController',
+			controllerAs: 'Docs',
+			template: require('./modules/Docs/views/docs.jade')()
+		})
+		.state({
 			url: '/login',
 			name: 'login',
 			controller: 'LoginController',
 			controllerAs: 'Login',
 			template: require('./modules/Login/views/login.jade')()
-		})
+		});
 };
 
 /** Export our config */

@@ -1,0 +1,22 @@
+.page_docs {
+	padding-bottom: 40px;
+
+	.image {
+		max-width: 400px;
+		max-height: 300px;
+	}
+
+	.header {
+		margin: 50px 0;
+		color: #555;
+	}
+
+	.code {
+		padding: 1px 5px;
+		color: #d82222;
+		background-color: #e8e8e8;
+		border: 1px solid #d8d7d7;
+		border-radius: 6px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+	}
+}

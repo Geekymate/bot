@@ -12,16 +12,16 @@ div(class="container")
 					| Geekymate
 			div(style="height: 1px;" aria-expanded="false" id="navbar" class="navbar-collapse collapse")
 				ul(class="nav navbar-nav")
-					li(ng-class="{active: $state.includes('home')}")
+					li(ng-class="{active: Starter.state.includes('home')}")
 						a(ui-sref="home")
 							| Главная
-					li(class="nav_button") 
-						a(ui-href="Docs.html")
+					li(class="nav_button" ng-class="{active: Starter.state.includes('docs')}")
+						a(ui-sref="docs")
 							| Документация
-					li(class="nav_button")
+					li(class="nav_button" ng-class="{active: Starter.state.includes('test')}")
 						a(ui-sref="test")
 							| Тесты
-				ul(class="nav navbar-nav navbar-right")
+				ul(class="nav navbar-nav navbar-right" ng-class="{active: Starter.state.includes('login')}")
 					li(cl§ass="nav_button")
 						a(ui-sref="login")
 							| Вход
