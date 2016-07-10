@@ -20,7 +20,7 @@ export default class TestListController {
 
 
 		this.publishTest = id => {
-			const url = 'http://loocalhost:9000/api/publish';
+			const url = 'http://localhost:9000/api/publish';
 			const data = {
 				id
 			};
