@@ -1,10 +1,12 @@
 export default class TestController {
-  constructor(TitleService) {
-    'ngInject';
+	constructor($http, TitleService) {
+		'ngInject';
 
-    TitleService.setTitle({
-      newTitle: 'Test'
-    });
+		TitleService.setTitle({
+			newTitle: 'Test'
+		});
+
+		this.postStatus = 'unpublished';
 
 		this.test = {
 			title: 'Тест 1',
@@ -48,6 +50,15 @@ export default class TestController {
 			}]
 		};
 
-		this.publishTest = () => console.log(this.test);
-  }
+		this.publishTest = () => {
+			const url = 'http://localhost:9000/api/tests';
+			const data = this.test;
+
+			return $http.post(url, data).then(res => {
+				this.postStatus = 'published';
+			}, err => {
+				this.postStatus = 'unpublished';
+			});
+		}
+	}
 }

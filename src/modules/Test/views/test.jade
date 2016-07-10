@@ -1,10 +1,12 @@
-div(class='containter text-center')
-	{{Test.test.questions[0]}}
-	div(class='row text-center')
-		form.page-content.form(
+div.page-test(class='container' ng-switch='Test.postStatus')
+	span.success-message(class='col-xs-8' ng-switch-when='published')
+		| Ваш тест был успешно опубликован
+	div(class='row' ng-switch-when='unpublished')
+		form.form(
 			name='test'
+			class='col-xs-offset-2 col-xs-8'
 		)
-			ul.questions(class='col-xs-8')
+			ul.questions
 				li.question
 					input(
 						type='text'
@@ -12,7 +14,7 @@ div(class='containter text-center')
 						ng-model='Test.test.questions[0].title'
 						placeholder='Введите первый вопрос:'
 					)
-					ul Введите варианты ответа:
+					ul
 						li.answer
 							input(
 								type='text'
@@ -48,7 +50,7 @@ div(class='containter text-center')
 						ng-model='Test.test.questions[1].title'
 						placeholder='Введите первый вопрос:'
 					)
-					ul Введите варианты ответа:
+					ul
 						li.answer
 							input(
 								type='text'
@@ -81,10 +83,11 @@ div(class='containter text-center')
 				li.question
 					input(
 						type='text'
+						class='form-control'
 						ng-model='Test.test.questions[2].title'
 						placeholder='Введите первый вопрос:'
 					)
-					ul Введите варианты ответа:
+					ul
 						li.answer
 							input(
 								type='text'
@@ -121,7 +124,7 @@ div(class='containter text-center')
 						ng-model='Test.test.questions[3].title'
 						placeholder='Введите первый вопрос:'
 					)
-					ul Введите варианты ответа:
+					ul
 						li.answer
 							input(
 								type='text'
@@ -143,16 +146,16 @@ div(class='containter text-center')
 								ng-model='Test.test.questions[3].answers.answer_third'
 								placeholder='Введите третий ответ:'
 							)
-					li.answer
-						input(
-							type='text'
-							class='form-control'
-							ng-model='Test.test.questions[3].answers.answer_fourth'
-							placeholder='Введите четвертый ответ:'
-						)
-	button(
-		type='submit'
-		class="btn btn-default btn-success col-xs-8"
-		ng-click='Test.publishTest()'
-	).form_button
-		| Опубликовать тест
+						li.answer
+							input(
+								type='text'
+								class='form-control'
+								ng-model='Test.test.questions[3].answers.answer_fourth'
+								placeholder='Введите четвертый ответ:'
+							)
+			button(
+				type='submit'
+				class="btn btn-default btn-success col-xs-12 "
+				ng-click='Test.publishTest()'
+			).form_button
+				| Опубликовать тест

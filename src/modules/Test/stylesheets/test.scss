@@ -1,2 +1,26 @@
 @import "../../../stylesheets/mixins.scss";
 @import "../../../stylesheets/variables.scss";
+
+
+.page-test {
+	ul
+	li {
+		list-style: none;
+	}
+
+	ul {
+		margin-top: 20px;
+	}
+
+	li {
+		margin: 10px;
+
+		&:last-of-type {
+			margin-bottom: 30px;
+		}
+	}
+
+	.success-message {
+		color: #449d44;
+	}
+}
